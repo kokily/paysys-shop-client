@@ -1,5 +1,6 @@
+import type { ChangeEvent } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { checkAPI, registerAPI } from '../../api/auth';
 

@@ -37,6 +37,7 @@ export default function useReadMenu() {
 
       if (id) {
         dispatch(addCartAPI({ item_id: id, count, price }));
+        toast.success('메뉴 추가!');
         router.back();
       } else {
         return;
@@ -57,7 +58,7 @@ export default function useReadMenu() {
     } else {
       return;
     }
-  }, []);
+  }, [dispatch, router.query]);
 
   useEffect(() => {
     if (menu) {

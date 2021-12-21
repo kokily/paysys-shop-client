@@ -8,7 +8,7 @@ type QueryType = {
   native?: string;
 };
 
-export default function useListMenu() {
+function useListMenu() {
   const router = useRouter();
   const { divide, native }: QueryType = router.query;
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ export default function useListMenu() {
 
   useEffect(() => {
     dispatch(listMenuAPI({ divide, native }));
-  }, [dispatch]);
+  }, [dispatch, router.query]);
 
   return {
     menu: menus,
@@ -36,3 +36,5 @@ export default function useListMenu() {
     loading: listMenuLoading,
   };
 }
+
+export default useListMenu;
