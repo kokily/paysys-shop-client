@@ -49,6 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:17.0.2"],
             ["react-is", "npm:17.0.2"],
             ["react-redux", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:7.2.6"],
+            ["react-toastify", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:8.1.0"],
             ["redux", "npm:4.1.2"],
             ["styled-components", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:5.3.3"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
@@ -1613,6 +1614,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/clean-stack-npm-2.2.0-a8ce435a5c-2ac8cd2b2f.zip/node_modules/clean-stack/",
           "packageDependencies": [
             ["clean-stack", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["clsx", [
+        ["npm:1.1.1", {
+          "packageLocation": "./.yarn/cache/clsx-npm-1.1.1-362bec0598-ff05265032.zip/node_modules/clsx/",
+          "packageDependencies": [
+            ["clsx", "npm:1.1.1"]
           ],
           "linkType": "HARD",
         }]
@@ -4457,6 +4467,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:17.0.2"],
             ["react-is", "npm:17.0.2"],
             ["react-redux", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:7.2.6"],
+            ["react-toastify", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:8.1.0"],
             ["redux", "npm:4.1.2"],
             ["styled-components", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:5.3.3"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
@@ -4786,6 +4797,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/react-refresh-npm-0.8.3-9b3fb3900b-3cffe5a9cb.zip/node_modules/react-refresh/",
           "packageDependencies": [
             ["react-refresh", "npm:0.8.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react-toastify", [
+        ["npm:8.1.0", {
+          "packageLocation": "./.yarn/cache/react-toastify-npm-8.1.0-2a38351740-9d7b18c747.zip/node_modules/react-toastify/",
+          "packageDependencies": [
+            ["react-toastify", "npm:8.1.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:8.1.0", {
+          "packageLocation": "./.yarn/__virtual__/react-toastify-virtual-07c6dd3553/0/cache/react-toastify-npm-8.1.0-2a38351740-9d7b18c747.zip/node_modules/react-toastify/",
+          "packageDependencies": [
+            ["react-toastify", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:8.1.0"],
+            ["@types/react", "npm:17.0.37"],
+            ["@types/react-dom", null],
+            ["clsx", "npm:1.1.1"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
           ],
           "linkType": "HARD",
         }]
