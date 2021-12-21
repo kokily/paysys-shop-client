@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { loginAPI } from '../../api/auth';
+import { checkAPI, loginAPI } from '../../api/auth';
 
 export default function useLogin() {
   const router = useRouter();
@@ -30,6 +30,10 @@ export default function useLogin() {
 
     dispatch(loginAPI({ username, password }));
   }, [username, password]);
+
+  useEffect(() => {
+    dispatch(checkAPI());
+  }, []);
 
   useEffect(() => {
     if (user) {

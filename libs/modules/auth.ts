@@ -2,12 +2,6 @@ import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 import { loginAPI, registerAPI, checkAPI, logoutAPI } from '../api/auth';
 
-export interface MeType {
-  user_id: string;
-  username: string;
-  admin: boolean;
-}
-
 export interface AuthState {
   user: MeType | null;
   loginLoading: boolean;
