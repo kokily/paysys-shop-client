@@ -14,7 +14,7 @@ export default function useLoggedIn(isAdmin?: boolean) {
 
   useEffect(() => {
     if (checkError) {
-      alert(checkError);
+      router.push('/');
     }
 
     if (isAdmin && user) {

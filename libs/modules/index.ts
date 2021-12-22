@@ -3,6 +3,7 @@ import auth from './auth';
 import bills from './bills';
 import cart from './cart';
 import menu from './menu';
+import password from './password';
 import reserve from './reserve';
 
 const rootReducer = combineReducers({

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { KeyboardEvent, MouseEvent } from 'react';
 import styled from 'styled-components';
 import AuthButton from './AuthButton';
 import AuthInput from './AuthInput';
@@ -59,6 +59,12 @@ const AuthForm: React.FC<Props> = ({
   onChange,
   onSubmit,
 }) => {
+  const onKeyPress = (e: KeyboardEvent<HTMLInputElement> & MouseEvent) => {
+    if (e.key === 'Enter') {
+      onSubmit(e);
+    }
+  };
+
   return (
     <Container>
       <InputGroup>
@@ -68,7 +74,13 @@ const AuthForm: React.FC<Props> = ({
       </InputGroup>
 
       <InputGroup>
-        <AuthInput type="password" name="password" value={password} onChange={onChange} />
+        <AuthInput
+          type="password"
+          name="password"
+          value={password}
+          onChange={onChange}
+          onKeyPress={onKeyPress}
+        />
         <Bar className="bar" />
         <Label>비밀번호</Label>
       </InputGroup>
@@ -80,6 +92,7 @@ const AuthForm: React.FC<Props> = ({
             name="passwordConfirm"
             value={passwordConfirm}
             onChange={onChange}
+            onKeyPress={onKeyPress}
           />
           <Bar className="bar" />
           <Label>비밀번호 확인</Label>

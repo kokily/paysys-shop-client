@@ -75,6 +75,7 @@ const authSlice = createSlice({
     },
     [logoutAPI.fulfilled.type]: (state) => {
       state.logoutLoading = false;
+      state.user = null;
     },
     [logoutAPI.rejected.type]: (state, action: ReturnType<typeof logoutAPI.rejected>) => {
       state.logoutLoading = false;
