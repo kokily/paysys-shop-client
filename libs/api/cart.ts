@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 import client from './client';
 
 export interface AddCartPayload {
@@ -15,6 +16,7 @@ export const addCartAPI = createAsyncThunk(
       const response = await client.post('/cart', payload);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -28,6 +30,7 @@ export const viewCartAPI = createAsyncThunk(
       const response = await client.get('/cart');
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -41,6 +44,7 @@ export const removeCartAPI = createAsyncThunk(
       const response = await client.delete('/cart');
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -54,6 +58,7 @@ export const removeOneCartAPI = createAsyncThunk(
       const response = await client.patch(`/cart/${payload}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }

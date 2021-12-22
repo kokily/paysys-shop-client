@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 import client from './client';
 
 export interface AuthPayload {
@@ -14,6 +15,7 @@ export const loginAPI = createAsyncThunk(
       const response = await client.post('/auth/login', payload);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -27,6 +29,7 @@ export const registerAPI = createAsyncThunk(
       const response = await client.post('/auth/register', payload);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -50,6 +53,7 @@ export const logoutAPI = createAsyncThunk(
       const response = await client.post('/auth/logout');
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }

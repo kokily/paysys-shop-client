@@ -1,5 +1,6 @@
-import { createSlice, SerializedError } from '@reduxjs/toolkit';
-import { changePasswordAPI } from '../api/password';
+import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
+import { changePasswordAPI, PasswordPayload } from '../api/password';
 
 export interface PasswordState {
   changePasswordLoading: boolean;
@@ -16,7 +17,10 @@ const passwordSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [changePasswordAPI.pending.type]: (state) => {
+    [changePasswordAPI.pending.type]: (
+      state,
+      _action: PayloadAction<PasswordPayload>
+    ) => {
       state.changePasswordLoading = true;
       state.changePasswordError = null;
     },

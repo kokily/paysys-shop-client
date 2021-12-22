@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 import client from './client';
 
 export interface AddReservePayload {
@@ -14,6 +15,7 @@ export const addReserveAPI = createAsyncThunk(
       const response = await client.post('/reserve', payload);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -27,6 +29,7 @@ export const removeReserveAPI = createAsyncThunk(
       const response = await client.delete(`/reserve/${payload}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }

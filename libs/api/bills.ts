@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import qs from 'qs';
+import { toast } from 'react-toastify';
 import client from './client';
 
 export interface AddBillPayload {
@@ -23,6 +24,7 @@ export const addBillAPI = createAsyncThunk(
       const response = await client.post('/bills', payload);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -37,6 +39,7 @@ export const listBillsAPI = createAsyncThunk(
       const response = await client.get(`/bills?${queryString}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -50,6 +53,7 @@ export const readBillAPI = createAsyncThunk(
       const response = await client.get(`/bills/${payload}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -63,6 +67,7 @@ export const restoreBillAPI = createAsyncThunk(
       const response = await client.patch(`/bills/${payload}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -76,6 +81,7 @@ export const removeBillAPI = createAsyncThunk(
       const response = await client.delete(`/bills/${payload}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }

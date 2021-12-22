@@ -22,7 +22,7 @@ export default function usePassword() {
       return;
     }
 
-    await dispatch(changePasswordAPI(password));
+    await dispatch(changePasswordAPI({ password }));
     toast.success('비밀번호 변경');
     router.push('/soldier');
   };

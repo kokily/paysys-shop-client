@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import qs from 'qs';
+import { toast } from 'react-toastify';
 import client from './client';
 
 export interface ListMenuQuery {
@@ -19,6 +20,7 @@ export const listMenuAPI = createAsyncThunk(
       const response = await client.get(`/items?${queryString}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
@@ -32,6 +34,7 @@ export const readMenuAPI = createAsyncThunk(
       const response = await client.get(`/items/${payload}`);
       return response.data;
     } catch (err: any) {
+      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
