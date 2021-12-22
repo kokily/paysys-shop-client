@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@reduxjs/toolkit", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:1.7.1"],
+            ["@types/lodash", "npm:4.14.178"],
             ["@types/node", "npm:17.0.2"],
             ["@types/qs", "npm:6.9.7"],
             ["@types/react", "npm:17.0.37"],
@@ -46,9 +47,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-plugin-styled-components", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:2.0.2"],
             ["eslint", "npm:8.5.0"],
             ["eslint-config-next", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:12.0.7"],
+            ["lodash", "npm:4.17.21"],
             ["next", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:12.0.4"],
             ["qs", "npm:6.10.2"],
             ["react", "npm:17.0.2"],
+            ["react-device-detect", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:2.1.2"],
             ["react-dom", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:17.0.2"],
             ["react-icons", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:4.3.1"],
             ["react-is", "npm:17.0.2"],
@@ -743,6 +746,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip/node_modules/@types/json5/",
           "packageDependencies": [
             ["@types/json5", "npm:0.0.29"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/lodash", [
+        ["npm:4.14.178", {
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.178-5433b9ed68-a69a04a60b.zip/node_modules/@types/lodash/",
+          "packageDependencies": [
+            ["@types/lodash", "npm:4.14.178"]
           ],
           "linkType": "HARD",
         }]
@@ -4563,6 +4575,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["paysys-shop-client", "workspace:."],
             ["@reduxjs/toolkit", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:1.7.1"],
+            ["@types/lodash", "npm:4.14.178"],
             ["@types/node", "npm:17.0.2"],
             ["@types/qs", "npm:6.9.7"],
             ["@types/react", "npm:17.0.37"],
@@ -4573,9 +4586,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-plugin-styled-components", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:2.0.2"],
             ["eslint", "npm:8.5.0"],
             ["eslint-config-next", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:12.0.7"],
+            ["lodash", "npm:4.17.21"],
             ["next", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:12.0.4"],
             ["qs", "npm:6.10.2"],
             ["react", "npm:17.0.2"],
+            ["react-device-detect", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:2.1.2"],
             ["react-dom", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:17.0.2"],
             ["react-icons", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:4.3.1"],
             ["react-is", "npm:17.0.2"],
@@ -4848,6 +4863,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["loose-envify", "npm:1.4.0"],
             ["object-assign", "npm:4.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["react-device-detect", [
+        ["npm:2.1.2", {
+          "packageLocation": "./.yarn/cache/react-device-detect-npm-2.1.2-d0bec5974b-3cc16b4132.zip/node_modules/react-device-detect/",
+          "packageDependencies": [
+            ["react-device-detect", "npm:2.1.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:2.1.2", {
+          "packageLocation": "./.yarn/__virtual__/react-device-detect-virtual-11a59766bf/0/cache/react-device-detect-npm-2.1.2-d0bec5974b-3cc16b4132.zip/node_modules/react-device-detect/",
+          "packageDependencies": [
+            ["react-device-detect", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:2.1.2"],
+            ["@types/react", "npm:17.0.37"],
+            ["@types/react-dom", null],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:8b7bbc630c2c3c80ef24f2c4b7bcaae7256e2b4c7aee7adb738784cf13b00fd24d7815f6e48d8a0319968fc53b563f23304533c5429b85fbc57af398abf585d7#npm:17.0.2"],
+            ["ua-parser-js", "npm:0.7.31"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
           ],
           "linkType": "HARD",
         }]
@@ -5902,6 +5944,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/typescript-patch-0b90225f97-2e488dde7d.zip/node_modules/typescript/",
           "packageDependencies": [
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["ua-parser-js", [
+        ["npm:0.7.31", {
+          "packageLocation": "./.yarn/cache/ua-parser-js-npm-0.7.31-aeb4c9aae9-e2f8324a83.zip/node_modules/ua-parser-js/",
+          "packageDependencies": [
+            ["ua-parser-js", "npm:0.7.31"]
           ],
           "linkType": "HARD",
         }]
