@@ -1,12 +1,15 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
-import { AddExpensePayload, UpdateExpensePayload } from '../types';
 import client from './client';
+
+export interface UpdateExpensePayload extends ExpenseType {
+  id: string;
+}
 
 // Add Expense Thunk
 export const addExpenseAPI = createAsyncThunk(
   'expense/addExpense',
-  async (payload: AddExpensePayload, { rejectWithValue }) => {
+  async (payload: ExpenseType, { rejectWithValue }) => {
     try {
       const response = await client.post('/expense', payload);
       return response.data;

@@ -63,7 +63,7 @@ export interface AddExpensePayload {
   reserve_pay: string;
   prepayment_husband: string;
   prepayment_bride: string;
-  onBack: () => void;
+  onList: () => void;
   onAddExpense: (e: MouseEvent) => void;
 }
 
