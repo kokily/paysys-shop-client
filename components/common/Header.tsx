@@ -3,7 +3,6 @@ import React, { useCallback, useRef } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { media, shadow } from '../../styles';
-import { MeType } from '../../libs/modules/auth';
 import useLogout from '../../libs/hooks/auth/useLogout';
 import useToggle from '../../libs/hooks/common/useToggle';
 import Apeach from './nav/Apeach';

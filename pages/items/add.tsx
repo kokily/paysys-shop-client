@@ -7,7 +7,7 @@ import useAddItem from '../../libs/hooks/items/useAddItem';
 const AddItemPage: NextPage = () => {
   const { user } = useLoggedIn(true);
   const { name, divide, native, unit, price, onChange, onAddItem, onKeyPress, onList } =
-    useAddItem();
+    useAddItem(false);
 
   return (
     <PageTemlate user={user}>
