@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import auth from './auth';
 import bills from './bills';
 import cart from './cart';
+import items from './items';
 import menu from './menu';
 import password from './password';
 import reserve from './reserve';
@@ -10,7 +11,9 @@ const rootReducer = combineReducers({
   auth,
   bills,
   cart,
+  items,
   menu,
+  password,
   reserve,
 });
 

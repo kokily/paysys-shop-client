@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import { readMenuAPI } from '../../api/items';
+import { readMenuAPI } from '../../api/menu';
 import { addCartAPI } from '../../api/cart';
 
 export default function useReadMenu() {

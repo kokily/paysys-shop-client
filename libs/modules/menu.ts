@@ -1,6 +1,6 @@
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
-import { listMenuAPI, readMenuAPI } from '../api/items';
+import { listMenuAPI, readMenuAPI } from '../api/menu';
 
 export interface MenuState {
   menus: ItemType[];

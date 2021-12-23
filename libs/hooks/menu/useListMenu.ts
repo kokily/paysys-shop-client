@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
-import { listMenuAPI } from '../../api/items';
+import { listMenuAPI } from '../../api/menu';
 
 type QueryType = {
   divide?: string;
