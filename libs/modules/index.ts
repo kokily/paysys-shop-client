@@ -6,6 +6,7 @@ import items from './items';
 import menu from './menu';
 import password from './password';
 import reserve from './reserve';
+import users from './users';
 
 const rootReducer = combineReducers({
   auth,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   menu,
   password,
   reserve,
+  users,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
