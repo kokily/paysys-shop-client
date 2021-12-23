@@ -77,7 +77,7 @@ const NavList: React.FC<Props> = ({ user_id, admin, onClose, onLogout, visible }
 
                     <Split />
 
-                    <NavItem href="/toptitle">행사별 현황</NavItem>
+                    <NavItem href="/result/toptitle">행사별 현황</NavItem>
                   </>
                 )}
 

@@ -6,6 +6,7 @@ import items from './items';
 import menu from './menu';
 import password from './password';
 import reserve from './reserve';
+import result from './result';
 import users from './users';
 
 const rootReducer = combineReducers({
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   menu,
   password,
   reserve,
+  result,
   users,
 });
 
