@@ -37,7 +37,7 @@ const Reserve: React.FC<Props> = ({ reserve, reserve_pay, onChange }) => {
           </tr>
 
           <TableSelect
-            title="예약금"
+            title="예약금 분할"
             name="reserve"
             value={reserve}
             onChange={onChange}
@@ -45,7 +45,7 @@ const Reserve: React.FC<Props> = ({ reserve, reserve_pay, onChange }) => {
           />
 
           <TableOneInput
-            title="예약금 분할"
+            title="예약금"
             name="reserve_pay"
             value={reserve_pay}
             onChange={onChange}

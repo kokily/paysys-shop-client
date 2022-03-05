@@ -30,7 +30,6 @@ export const viewCartAPI = createAsyncThunk(
       const response = await client.get('/cart');
       return response.data;
     } catch (err: any) {
-      toast.error(err.response.data);
       return rejectWithValue(err.response.data);
     }
   }
