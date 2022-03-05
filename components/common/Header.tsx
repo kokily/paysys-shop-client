@@ -1,7 +1,8 @@
-import type { MouseEvent } from 'react';
+import { MouseEvent, useState } from 'react';
 import React, { useCallback, useRef } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { media, shadow } from '../../styles';
 import useLogout from '../../libs/hooks/auth/useLogout';
 import useToggle from '../../libs/hooks/common/useToggle';
@@ -43,28 +44,75 @@ const Content = styled.div`
   }
 `;
 
-const Logo = styled.a`
+const Logo = styled.a<LogoProps>`
   font-size: 1.4rem;
   letter-spacing: 2px;
-  color: #02c363;
   font-family: 'Rajdhani';
-  font-weight: 600;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
   &:hover {
     text-shadow: 0.5px 0.5px;
   }
+
+  ${(props) =>
+    props.soldier &&
+    css`
+      color: #1098ad;
+    `}
+  ${(props) =>
+    props.reserve &&
+    css`
+      color: #68a614;
+    `}
+    ${(props) =>
+    props.general &&
+    css`
+      color: #e47112;
+    `}
+    ${(props) =>
+    props.cart &&
+    css`
+      color: #0ca678;
+    `}
+    ${(props) =>
+    props.fronts &&
+    css`
+      color: #1098ad;
+    `}
+    ${(props) =>
+    props.password &&
+    css`
+      color: #845ef7;
+    `}
+    ${(props) =>
+    props.weddings &&
+    css`
+      color: #7048e8;
+    `}
 `;
 
 const Spacer = styled.div`
   flex-grow: 1;
 `;
 
+interface LogoProps {
+  soldier?: boolean;
+  reserve?: boolean;
+  general?: boolean;
+  cart?: boolean;
+  fronts?: boolean;
+  password?: boolean;
+  weddings?: boolean;
+}
+
 interface Props {
   user: MeType | null;
 }
 
 const Header: React.FC<Props> = ({ user }) => {
+  const router = useRouter();
+  const [link] = useState(router.pathname.substring(1));
   const { onLogout } = useLogout();
   const [menu, toggleMenu] = useToggle(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -85,7 +133,17 @@ const Header: React.FC<Props> = ({ user }) => {
       <Layout>
         <Content>
           <Link href="/soldier">
-            <Logo>행사전표시스템</Logo>
+            <Logo
+              soldier={link === 'soldier' && true}
+              reserve={link === 'reserve' && true}
+              general={link === 'general' && true}
+              cart={link === 'cart' && true}
+              fronts={link === 'fronts' && true}
+              password={link === 'password' && true}
+              weddings={link === 'weddings' && true}
+            >
+              행사전표시스템
+            </Logo>
           </Link>
 
           <Spacer />
