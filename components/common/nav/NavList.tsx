@@ -31,7 +31,7 @@ const Split = styled.div`
 interface Props {
   user_id: string | null;
   admin: boolean;
-  onClose: (e: React.MouseEvent) => void;
+  onClose: (e: any) => void;
   onLogout: () => void;
   visible: boolean;
 }

@@ -1,5 +1,5 @@
-import { MouseEvent, useState } from 'react';
-import React, { useCallback, useRef } from 'react';
+import type { MouseEvent } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled, { css } from 'styled-components';
