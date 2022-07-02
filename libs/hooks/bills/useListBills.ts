@@ -4,10 +4,12 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { listBillsAPI } from '../../api/bills';
 import { clearBills } from '../../modules/bills';
+import useLocalStorage from 'use-local-storage';
 
 export default function useListBills() {
   const router = useRouter();
   const dispatch = useDispatch();
+  const [scrollY, setScrollY] = useLocalStorage('listBills', 0);
   const { bills, hasMoreBills, listBillsLoading } = useSelector((state) => state.bills);
   const [inputs, setInputs] = useState({
     title: '',
@@ -54,6 +56,7 @@ export default function useListBills() {
   };
 
   const onDetail = (id: string) => {
+    setScrollY(window.scrollY);
     router.push(`/fronts/${id}`);
   };
 
@@ -82,6 +85,10 @@ export default function useListBills() {
       window.removeEventListener('scroll', onScroll);
     };
   }, [hasMoreBills, listBillsLoading, bills]);
+
+  useEffect(() => {
+    if (scrollY !== 0) window.scrollTo(0, Number(scrollY));
+  }, []);
 
   return {
     fronts: bills,
